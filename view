@@ -1,0 +1,3208 @@
+{
+  "version": "2.103.0",
+  "grid": {
+    "layers": {
+      "Default layer": {
+        "name": "Default layer"
+      },
+      "admin": {
+        "name": "admin"
+      },
+      "importdata": {
+        "name": "importdata"
+      }
+    },
+    "xWidth": 10,
+    "yHeight": 10
+  },
+  "modules": [
+    {
+      "url": "modules/types/array_search/smart_array_filter/",
+      "configuration": {
+        "sections": {},
+        "groups": {
+          "group": [
+            {
+              "debounce": [
+                100
+              ],
+              "limit": [
+                0
+              ],
+              "initialValue": [
+                ""
+              ],
+              "placeholder": [
+                "Search for gene"
+              ],
+              "fontSize": [
+                24
+              ]
+            }
+          ]
+        }
+      },
+      "layers": {
+        "Default layer": {
+          "position": {
+            "left": 1,
+            "top": 3
+          },
+          "size": {
+            "width": 46,
+            "height": 7
+          },
+          "zIndex": 0,
+          "display": true,
+          "title": "",
+          "bgColor": [
+            255,
+            255,
+            255,
+            0
+          ],
+          "wrapper": false,
+          "created": true,
+          "name": "Default layer"
+        },
+        "admin": {
+          "position": {
+            "left": 0,
+            "top": 1
+          },
+          "size": {
+            "width": 42,
+            "height": 9
+          },
+          "zIndex": 0,
+          "display": false,
+          "title": "",
+          "bgColor": [
+            255,
+            255,
+            255,
+            0
+          ],
+          "wrapper": true,
+          "created": true,
+          "name": "admin"
+        },
+        "importdata": {
+          "position": {
+            "left": 1,
+            "top": 3
+          },
+          "size": {
+            "width": 46,
+            "height": 7
+          },
+          "zIndex": 0,
+          "display": false,
+          "title": "",
+          "bgColor": [
+            255,
+            255,
+            255,
+            0
+          ],
+          "wrapper": false,
+          "created": true,
+          "name": "Default layer"
+        }
+      },
+      "id": 1,
+      "vars_in": [
+        {
+          "rel": "input",
+          "name": "entries"
+        }
+      ],
+      "actions_in": [
+        {}
+      ],
+      "actions_out": [
+        {
+          "jpath": []
+        }
+      ],
+      "vars_out": [
+        {
+          "event": "onQuery",
+          "rel": "output",
+          "jpath": [],
+          "name": "fileredentry"
+        }
+      ],
+      "toolbar": {
+        "custom": [
+          [
+            {
+              "title": "ORF",
+              "icon": "",
+              "action": "",
+              "position": "begin",
+              "color": [
+                100,
+                100,
+                100,
+                1
+              ]
+            },
+            {
+              "title": "Gene",
+              "icon": "",
+              "action": "",
+              "position": "begin",
+              "color": [
+                100,
+                100,
+                100,
+                1
+              ]
+            }
+          ]
+        ],
+        "common": [
+          {
+            "toolbar": [
+              [
+                "Open Preferences"
+              ]
+            ]
+          }
+        ]
+      },
+      "css": [
+        {
+          "fontSize": [
+            ""
+          ],
+          "fontFamily": [
+            ""
+          ]
+        }
+      ],
+      "title": ""
+    },
+    {
+      "url": "modules/types/edition/slick_grid/",
+      "configuration": {
+        "sections": {},
+        "groups": {
+          "group": [
+            {
+              "slickCheck": [
+                [
+                  "enableCellNavigation",
+                  "rowNumbering",
+                  "forceFitColumns",
+                  "highlightScroll",
+                  "editable"
+                ]
+              ],
+              "copyPaste": [
+                []
+              ],
+              "copyPasteOptions": [
+                [
+                  "newRows"
+                ]
+              ],
+              "autoColumns": [
+                [
+                  "select"
+                ]
+              ],
+              "toolbar": [
+                []
+              ],
+              "colorjpath": [
+                []
+              ],
+              "slick.defaultColumnWidth": [
+                null
+              ],
+              "slick.rowHeight": [
+                null
+              ],
+              "slick.headerRowHeight": [
+                30
+              ],
+              "slick.selectionModel": [
+                "row"
+              ],
+              "idProperty": [
+                ""
+              ],
+              "filterType": [
+                "pref"
+              ],
+              "filterRow": [
+                "// Documentation: https://github.com/NPellet/visualizer/blob/46b40ca86345f8fa313563bf9c6ecb80ba323101/src/modules/types/edition/slick_grid/view.js#L1695-L1735"
+              ],
+              "customJpaths": [
+                ""
+              ]
+            }
+          ],
+          "cols": [
+            [
+              {
+                "name": "Gene name",
+                "jpath": [
+                  "$content",
+                  "gene"
+                ],
+                "editor": "none",
+                "forceType": "",
+                "formatter": "typerenderer",
+                "copyFormatter": "default",
+                "visibility": "both",
+                "rendererOptions": "",
+                "editorOptions": "",
+                "hideColumn": []
+              },
+              {
+                "name": "ORF",
+                "jpath": [
+                  "$content",
+                  "orf"
+                ],
+                "editor": "none",
+                "forceType": "",
+                "formatter": "typerenderer",
+                "copyFormatter": "default",
+                "visibility": "both",
+                "rendererOptions": "",
+                "editorOptions": "",
+                "hideColumn": []
+              },
+              {
+                "name": "Modification date",
+                "jpath": [
+                  "$modificationDate"
+                ],
+                "editor": "none",
+                "forceType": "",
+                "formatter": "typerenderer",
+                "copyFormatter": "default",
+                "visibility": "both",
+                "rendererOptions": "",
+                "editorOptions": "",
+                "hideColumn": []
+              }
+            ]
+          ],
+          "actionCols": [
+            [
+              {
+                "backgroundColor": [
+                  255,
+                  255,
+                  255,
+                  0
+                ],
+                "color": [
+                  0,
+                  0,
+                  0,
+                  1
+                ],
+                "position": "end",
+                "clickMode": "text"
+              }
+            ]
+          ],
+          "groupings": [
+            [
+              {
+                "getter": []
+              }
+            ]
+          ],
+          "actionOutButtons": [
+            [
+              {}
+            ]
+          ],
+          "data": [
+            {
+              "saveInView": [
+                []
+              ],
+              "varname": [
+                ""
+              ],
+              "data": [
+                "[]"
+              ]
+            }
+          ]
+        }
+      },
+      "layers": {
+        "Default layer": {
+          "position": {
+            "left": 0,
+            "top": 9
+          },
+          "size": {
+            "width": 49,
+            "height": 60
+          },
+          "zIndex": 0,
+          "display": true,
+          "title": "Gene DB",
+          "bgColor": [
+            255,
+            255,
+            255,
+            0
+          ],
+          "wrapper": true,
+          "created": true,
+          "name": "Default layer"
+        },
+        "admin": {
+          "position": {
+            "left": 0,
+            "top": 11
+          },
+          "size": {
+            "width": 42,
+            "height": 45
+          },
+          "zIndex": 0,
+          "display": false,
+          "title": "",
+          "bgColor": [
+            255,
+            255,
+            255,
+            0
+          ],
+          "wrapper": true,
+          "created": true,
+          "name": "admin"
+        },
+        "importdata": {
+          "position": {
+            "left": 0,
+            "top": 9
+          },
+          "size": {
+            "width": 46,
+            "height": 50
+          },
+          "zIndex": 0,
+          "display": false,
+          "title": "Gene DB",
+          "bgColor": [
+            255,
+            255,
+            255,
+            0
+          ],
+          "wrapper": true,
+          "created": true,
+          "name": "Default layer"
+        }
+      },
+      "id": 2,
+      "vars_in": [
+        {
+          "rel": "list",
+          "name": "fileredentry"
+        }
+      ],
+      "actions_in": [
+        {}
+      ],
+      "actions_out": [
+        {
+          "jpath": []
+        }
+      ],
+      "vars_out": [
+        {
+          "event": "onRowActive",
+          "rel": "row",
+          "jpath": [],
+          "name": "activatedentry"
+        },
+        {
+          "event": "onRowsSelect",
+          "rel": "rows",
+          "jpath": [],
+          "name": "showData"
+        }
+      ],
+      "toolbar": {
+        "custom": [
+          [
+            {
+              "title": "",
+              "icon": "",
+              "action": "",
+              "position": "begin",
+              "color": [
+                100,
+                100,
+                100,
+                1
+              ]
+            }
+          ]
+        ],
+        "common": [
+          {
+            "toolbar": [
+              [
+                "Open Preferences"
+              ]
+            ]
+          }
+        ]
+      },
+      "css": [
+        {
+          "fontSize": [
+            ""
+          ],
+          "fontFamily": [
+            ""
+          ]
+        }
+      ],
+      "title": "Gene DB"
+    },
+    {
+      "url": "modules/types/client_interaction/code_executor/",
+      "configuration": {
+        "sections": {},
+        "groups": {
+          "group": [
+            {
+              "display": [
+                [
+                  "editor",
+                  "buttons"
+                ]
+              ],
+              "execOnLoad": [
+                []
+              ],
+              "asyncAwait": [
+                [
+                  "top"
+                ]
+              ],
+              "script": [
+                "\nconst button = this.button;\n\nif (button) {\n    switch (button) {\n    case 'getting':\n        const activatedentry = API.getData('activatedentry');\n        if (activatedentry) {\n            async function input() {\n            const activatedentry = API.getData('activatedentry');\n            const revisions = API.getData('revisions').resurrect();\n            const entries = API.getData('entries').resurrect();\n            const uuid = activatedentry._id;\n            const currentrevision = revisions[0].rev;\n            const textinput = API.getData('formsubmitted');\n            if (!textinput) {\n                alert('There\\'s no data to submit. Please fill the form, check submit option and push \\'Generate data\\' to continue');\n            } else {\n                \n                for (let i = 0; i < entries.length; i++) {\n                    if (entries[i]._id === uuid) {\n                        var entry = entries[i]\n                    }\n                }\n    \n                function Request(method, url) {\n                    var xhr = new XMLHttpRequest();\n                    xhr.withCredentials = true;\n                    xhr.open(method, url, true);\n                    xhr.setRequestHeader(\"Content-Type\", \"application/json;charset=UTF-8\");\n                    xhr.setRequestHeader(\"Accept\", \"application/json\");\n                    return xhr;\n                }\n                \n                var item = {\n                    \"_rev\": currentrevision,\n                    \"$type\": \"entry\",\n                    \"$id\": [\n                    entry.$content.gene\n                    ],\n                    \"$kind\": \"dna\",\n                    \"$owners\": [\n                    \"admin@cheminfo.org\"\n                    ],\n                    \"$content\": {\n                    \"gene\": entry.$content.gene,\n                    \"orf\": entry.$content.orf,\n                    \"nofprobes\": entry.$content.nofprobes,\n                    \"measurments\": entry.$content.measurments,\n                    \"Fstatistic\": entry.$content.Fstatistic,\n                    \"YPD\": entry.$content.YPD,\n                    \"YPDGE\": entry.$content.YPDGE,\n                    \"YPE\": entry.$content.YPE,\n                    \"YPL\": entry.$content.YPL,\n                    \"YPG\": entry.$content.YPG,\n                    \"description\": textinput,\n                    },\n                    \"$lastModification\": \"admin@cheminfo.org\"\n                }\n                let url = 'http://localhost:4444/roc/db/eln/entry/' + uuid;\n                var xhr = Request('GET', url);\n                xhr.send();\n                \n                xhr.onreadystatechange = function () {\n                    if (xhr.readyState == 4 && xhr.status == 200 )  {\n                        var lastRevision = JSON.parse(xhr.responseText)._rev;\n                        if (lastRevision !== currentrevision) {\n                            alert('Can\\'t import data over the same revision')\n                        } else {\n                            if (textinput.submit === false) {\n                                alert('There is no data in the form!');\n                            } else {\n                                for (let i = 0; i < 1; i++) {\n                                    let prom = new Promise((resolve) => {\n                                        let url = 'http://localhost:4444/roc/db/eln/entry/' + uuid;\n                                        var xhr = Request('PUT', url);\n                                        xhr.send(JSON.stringify(item));\n                                        //setTimeout(() => resolve() ,100)\n                                    });\n                                }\n                            }\n                            console.log('everything is ok')\n                        }\n                    }\n                };\n            }\n        } input()\n            console.log('activated');\n        } else {\n            alert('There\\'s no activated gene. Please choose one of Gene DB')\n        }\n\n        break;\n        default:\n    }\n};\n"
+              ]
+            }
+          ],
+          "libs": [
+            [
+              {}
+            ]
+          ],
+          "buttons": [
+            [
+              {
+                "name": "button1",
+                "label": "Execute",
+                "hide": [
+                  "hide"
+                ],
+                "disable": []
+              },
+              {
+                "name": "getting",
+                "label": "Insert data in DB",
+                "hide": [],
+                "disable": []
+              }
+            ]
+          ]
+        }
+      },
+      "layers": {
+        "Default layer": {
+          "position": {
+            "left": 19,
+            "top": 74
+          },
+          "size": {
+            "width": 15,
+            "height": 4
+          },
+          "zIndex": 0,
+          "display": true,
+          "title": "Create revision",
+          "bgColor": [
+            255,
+            255,
+            255,
+            0
+          ],
+          "wrapper": false,
+          "created": true,
+          "name": "Default layer"
+        },
+        "admin": {
+          "position": {
+            "left": 0,
+            "top": 0
+          },
+          "size": {
+            "width": 52,
+            "height": 58
+          },
+          "zIndex": 0,
+          "display": true,
+          "title": "",
+          "bgColor": [
+            255,
+            255,
+            255,
+            0
+          ],
+          "wrapper": true,
+          "created": true,
+          "name": "admin"
+        },
+        "importdata": {
+          "position": {
+            "left": 65,
+            "top": 55
+          },
+          "size": {
+            "width": 15,
+            "height": 4
+          },
+          "zIndex": 0,
+          "display": false,
+          "title": "Create revision",
+          "bgColor": [
+            255,
+            255,
+            255,
+            0
+          ],
+          "wrapper": false,
+          "created": true,
+          "name": "Default layer"
+        }
+      },
+      "id": 3,
+      "vars_in": [
+        {
+          "rel": "inputValue",
+          "name": "entries"
+        },
+        {
+          "rel": "inputValue",
+          "name": "activatedentry"
+        },
+        {
+          "rel": "inputValue",
+          "name": "revisions"
+        },
+        {
+          "rel": "inputValue",
+          "name": "formsubmitted"
+        }
+      ],
+      "actions_in": [
+        {}
+      ],
+      "vars_out": [
+        {
+          "jpath": []
+        }
+      ],
+      "actions_out": [
+        {
+          "jpath": []
+        }
+      ],
+      "toolbar": {
+        "custom": [
+          [
+            {
+              "title": "",
+              "icon": "",
+              "action": "",
+              "position": "begin",
+              "color": [
+                100,
+                100,
+                100,
+                1
+              ]
+            }
+          ]
+        ],
+        "common": [
+          {
+            "toolbar": [
+              [
+                "Open Preferences"
+              ]
+            ]
+          }
+        ]
+      },
+      "css": [
+        {
+          "fontSize": [
+            ""
+          ],
+          "fontFamily": [
+            ""
+          ]
+        }
+      ],
+      "title": "Create revision"
+    },
+    {
+      "url": "modules/types/client_interaction/code_executor/",
+      "configuration": {
+        "sections": {},
+        "groups": {
+          "group": [
+            {
+              "display": [
+                [
+                  "editor",
+                  "buttons"
+                ]
+              ],
+              "execOnLoad": [
+                []
+              ],
+              "asyncAwait": [
+                [
+                  "top"
+                ]
+              ],
+              "script": [
+                "var activatedentry = API.getData('activatedentry');\nif (activatedentry) {\n    function Request(method, url) {\n      var xhr = new XMLHttpRequest();\n      xhr.withCredentials = true;\n      xhr.open(method, url, true);\n      xhr.setRequestHeader(\"Content-Type\", \"application/json\");\n      xhr.setRequestHeader(\"Accept\", \"application/json\");\n        xhr.onreadystatechange = function () {\n            if (xhr.readyState == 4 && xhr.status == 200 ) {\n                API.createData('revisions', JSON.parse(xhr.responseText)._revs_info);\n            } \n        };\n      return xhr;\n    }\n    var uuid = activatedentry._id;\n    async function inputentry() {\n        let prom = new Promise((resolve) => {\n            let url = 'http://localhost:4444/roc/db/eln/entry/' + uuid + '?revs_info=true';\n            var xhr = Request('GET', url);\n            xhr.send();\n            setTimeout(() => resolve()) // *  try to fix this... number of entries change because this. If is running entries gives fake genes.\n        });\n        await prom;\n    } inputentry()\n} else {\n    alert('There\\'s no gene selected. Please choose one of Gene DB')\n};\n\n\n\n"
+              ]
+            }
+          ],
+          "libs": [
+            [
+              {}
+            ]
+          ],
+          "buttons": [
+            [
+              {
+                "name": "button1",
+                "label": "Update  revision status",
+                "hide": [],
+                "disable": []
+              }
+            ]
+          ]
+        }
+      },
+      "layers": {
+        "Default layer": {
+          "position": {
+            "left": 66,
+            "top": 73
+          },
+          "size": {
+            "width": 27,
+            "height": 5
+          },
+          "zIndex": 0,
+          "display": true,
+          "title": "",
+          "bgColor": [
+            255,
+            255,
+            255,
+            0
+          ],
+          "wrapper": false,
+          "created": true,
+          "name": "Default layer"
+        },
+        "admin": {
+          "position": {
+            "left": 53,
+            "top": 0
+          },
+          "size": {
+            "width": 46,
+            "height": 58
+          },
+          "zIndex": 0,
+          "display": true,
+          "title": "",
+          "bgColor": [
+            255,
+            255,
+            255,
+            0
+          ],
+          "wrapper": true,
+          "created": true,
+          "name": "admin"
+        },
+        "importdata": {
+          "position": {
+            "left": 108,
+            "top": 4
+          },
+          "size": {
+            "width": 17,
+            "height": 4
+          },
+          "zIndex": 0,
+          "display": false,
+          "title": "",
+          "bgColor": [
+            255,
+            255,
+            255,
+            0
+          ],
+          "wrapper": false,
+          "created": true,
+          "name": "Default layer"
+        }
+      },
+      "id": 4,
+      "vars_in": [
+        {
+          "rel": "inputValue",
+          "name": "activatedentry"
+        },
+        {
+          "rel": "inputValue",
+          "name": "formsubmitted"
+        }
+      ],
+      "actions_in": [
+        {}
+      ],
+      "vars_out": [
+        {
+          "event": "onScriptEnded",
+          "rel": "outputValue",
+          "jpath": [],
+          "name": "revisions"
+        }
+      ],
+      "actions_out": [
+        {
+          "jpath": []
+        }
+      ],
+      "toolbar": {
+        "custom": [
+          [
+            {
+              "title": "",
+              "icon": "",
+              "action": "",
+              "position": "begin",
+              "color": [
+                100,
+                100,
+                100,
+                1
+              ]
+            }
+          ]
+        ],
+        "common": [
+          {
+            "toolbar": [
+              [
+                "Open Preferences"
+              ]
+            ]
+          }
+        ]
+      },
+      "css": [
+        {
+          "fontSize": [
+            ""
+          ],
+          "fontFamily": [
+            ""
+          ]
+        }
+      ],
+      "title": ""
+    },
+    {
+      "url": "modules/types/edition/slick_grid/",
+      "configuration": {
+        "sections": {},
+        "groups": {
+          "group": [
+            {
+              "slickCheck": [
+                [
+                  "enableCellNavigation",
+                  "rowNumbering",
+                  "forceFitColumns",
+                  "highlightScroll",
+                  "editable"
+                ]
+              ],
+              "copyPaste": [
+                []
+              ],
+              "copyPasteOptions": [
+                [
+                  "newRows"
+                ]
+              ],
+              "autoColumns": [
+                []
+              ],
+              "toolbar": [
+                []
+              ],
+              "colorjpath": [
+                []
+              ],
+              "slick.defaultColumnWidth": [
+                null
+              ],
+              "slick.rowHeight": [
+                null
+              ],
+              "slick.headerRowHeight": [
+                30
+              ],
+              "slick.selectionModel": [
+                "row"
+              ],
+              "idProperty": [
+                ""
+              ],
+              "filterType": [
+                "pref"
+              ],
+              "filterRow": [
+                "// Documentation: https://github.com/NPellet/visualizer/blob/46b40ca86345f8fa313563bf9c6ecb80ba323101/src/modules/types/edition/slick_grid/view.js#L1695-L1735"
+              ],
+              "customJpaths": [
+                ""
+              ]
+            }
+          ],
+          "cols": [
+            [
+              {
+                "name": "Revision",
+                "jpath": [
+                  "rev"
+                ],
+                "editor": "none",
+                "forceType": "",
+                "formatter": "typerenderer",
+                "copyFormatter": "default",
+                "visibility": "both",
+                "rendererOptions": "",
+                "editorOptions": "",
+                "hideColumn": []
+              },
+              {
+                "name": "Status",
+                "jpath": [
+                  "status"
+                ],
+                "editor": "none",
+                "forceType": "",
+                "formatter": "typerenderer",
+                "copyFormatter": "default",
+                "visibility": "both",
+                "rendererOptions": "",
+                "editorOptions": "",
+                "hideColumn": []
+              }
+            ]
+          ],
+          "actionCols": [
+            [
+              {
+                "backgroundColor": [
+                  255,
+                  255,
+                  255,
+                  0
+                ],
+                "color": [
+                  0,
+                  0,
+                  0,
+                  1
+                ],
+                "position": "end",
+                "clickMode": "text"
+              }
+            ]
+          ],
+          "groupings": [
+            [
+              {
+                "getter": []
+              }
+            ]
+          ],
+          "actionOutButtons": [
+            [
+              {}
+            ]
+          ],
+          "data": [
+            {
+              "saveInView": [
+                []
+              ],
+              "varname": [
+                ""
+              ],
+              "data": [
+                "[]"
+              ]
+            }
+          ]
+        }
+      },
+      "layers": {
+        "Default layer": {
+          "position": {
+            "left": 50,
+            "top": 80
+          },
+          "size": {
+            "width": 47,
+            "height": 49
+          },
+          "zIndex": 0,
+          "display": true,
+          "title": "Available revisions",
+          "bgColor": [
+            255,
+            255,
+            255,
+            0
+          ],
+          "wrapper": true,
+          "created": true,
+          "name": "Default layer"
+        },
+        "admin": {
+          "position": {
+            "left": 1,
+            "top": 3
+          },
+          "size": {
+            "width": 42,
+            "height": 48
+          },
+          "zIndex": 0,
+          "display": false,
+          "title": "",
+          "bgColor": [
+            255,
+            255,
+            255,
+            0
+          ],
+          "wrapper": true,
+          "created": true,
+          "name": "admin"
+        },
+        "importdata": {
+          "position": {
+            "left": 94,
+            "top": 9
+          },
+          "size": {
+            "width": 47,
+            "height": 50
+          },
+          "zIndex": 0,
+          "display": false,
+          "title": "Available revisions",
+          "bgColor": [
+            255,
+            255,
+            255,
+            0
+          ],
+          "wrapper": true,
+          "created": true,
+          "name": "Default layer"
+        }
+      },
+      "id": 5,
+      "vars_in": [
+        {
+          "rel": "list",
+          "name": "revisions"
+        }
+      ],
+      "actions_in": [
+        {}
+      ],
+      "actions_out": [
+        {
+          "jpath": []
+        }
+      ],
+      "vars_out": [
+        {
+          "event": "onRowActive",
+          "rel": "row",
+          "jpath": [],
+          "name": "selectedrev"
+        }
+      ],
+      "toolbar": {
+        "custom": [
+          [
+            {
+              "title": "",
+              "icon": "",
+              "action": "",
+              "position": "begin",
+              "color": [
+                100,
+                100,
+                100,
+                1
+              ]
+            }
+          ]
+        ],
+        "common": [
+          {
+            "toolbar": [
+              [
+                "Open Preferences"
+              ]
+            ]
+          }
+        ]
+      },
+      "css": [
+        {
+          "fontSize": [
+            ""
+          ],
+          "fontFamily": [
+            ""
+          ]
+        }
+      ],
+      "title": "Available revisions"
+    },
+    {
+      "url": "modules/types/client_interaction/code_executor/",
+      "configuration": {
+        "sections": {},
+        "groups": {
+          "group": [
+            {
+              "display": [
+                [
+                  "editor",
+                  "buttons"
+                ]
+              ],
+              "execOnLoad": [
+                []
+              ],
+              "asyncAwait": [
+                [
+                  "top"
+                ]
+              ],
+              "script": [
+                "\nconst button = this.button;\n// let action = this.action;\n\nif (button) {\n    switch (button) {\n        case 'getdescription':\n            var selectedrev = API.getData('selectedrev').resurrect();\n            var activatedentry = API.getData('activatedentry');\n            var revision = selectedrev.rev;\n            var uuid = activatedentry._id;\n            \n            function Request(method, url) {\n              var xhr = new XMLHttpRequest();\n              xhr.withCredentials = true;\n              xhr.open(method, url, true);\n              xhr.setRequestHeader('Authorization', 'Bearer ' + 'access_token');\n              xhr.setRequestHeader(\"Content-Type\", \"application/json;charset=UTF-8\");\n              return xhr;\n            }\n            \n            async function entry() {\n                let prom = new Promise((resolve) => {\n                    let url = 'http://localhost:4444/roc/db/eln/entry/' + uuid + '?rev=' + revision;\n                    var xhr = Request('GET', url);\n                    xhr.send();\n                    setTimeout(() => resolve() ,100) \n                        xhr.onreadystatechange = function () {\n                            if (xhr.readyState == 4 && xhr.status == 200 ) {\n                                console.log(JSON.parse(xhr.responseText))\n                                API.createData('reportrevision', [JSON.parse(xhr.responseText)])\n                            }\n                        }\n                });\n                await prom;\n            } entry()\n        break;\n    default:\n    }\n}\n"
+              ]
+            }
+          ],
+          "libs": [
+            [
+              {}
+            ]
+          ],
+          "buttons": [
+            [
+              {
+                "name": "getdescription",
+                "label": "Show revision",
+                "hide": [],
+                "disable": []
+              }
+            ]
+          ]
+        }
+      },
+      "layers": {
+        "Default layer": {
+          "position": {
+            "left": 47,
+            "top": 140
+          },
+          "size": {
+            "width": 22,
+            "height": 4
+          },
+          "zIndex": 0,
+          "display": true,
+          "title": "Show revisions",
+          "bgColor": [
+            255,
+            255,
+            255,
+            0
+          ],
+          "wrapper": false,
+          "created": true,
+          "name": "Default layer"
+        },
+        "admin": {
+          "position": {
+            "left": 53,
+            "top": 59
+          },
+          "size": {
+            "width": 46,
+            "height": 42
+          },
+          "zIndex": 0,
+          "display": true,
+          "title": "",
+          "bgColor": [
+            255,
+            255,
+            255,
+            0
+          ],
+          "wrapper": true,
+          "created": true,
+          "name": "admin"
+        },
+        "importdata": {
+          "position": {
+            "left": 56,
+            "top": 72
+          },
+          "size": {
+            "width": 54,
+            "height": 75
+          },
+          "zIndex": 0,
+          "display": false,
+          "title": "Get revisions",
+          "bgColor": [
+            255,
+            255,
+            255,
+            0
+          ],
+          "wrapper": true,
+          "created": true,
+          "name": "Default layer"
+        }
+      },
+      "id": 6,
+      "vars_in": [
+        {
+          "rel": "inputValue",
+          "name": "selectedrev"
+        },
+        {
+          "rel": "inputValue",
+          "name": "text"
+        }
+      ],
+      "actions_in": [
+        {}
+      ],
+      "vars_out": [
+        {
+          "event": "onScriptEnded",
+          "rel": "outputValue",
+          "jpath": [],
+          "name": "reportrevision"
+        }
+      ],
+      "actions_out": [
+        {
+          "jpath": []
+        }
+      ],
+      "toolbar": {
+        "custom": [
+          [
+            {
+              "title": "",
+              "icon": "",
+              "action": "",
+              "position": "begin",
+              "color": [
+                100,
+                100,
+                100,
+                1
+              ]
+            }
+          ]
+        ],
+        "common": [
+          {
+            "toolbar": [
+              [
+                "Open Preferences"
+              ]
+            ]
+          }
+        ]
+      },
+      "css": [
+        {
+          "fontSize": [
+            ""
+          ],
+          "fontFamily": [
+            ""
+          ]
+        }
+      ],
+      "title": "Show revisions"
+    },
+    {
+      "url": "modules/types/edition/slick_grid/",
+      "configuration": {
+        "sections": {},
+        "groups": {
+          "group": [
+            {
+              "slickCheck": [
+                [
+                  "enableCellNavigation",
+                  "rowNumbering",
+                  "forceFitColumns",
+                  "highlightScroll",
+                  "forgetLastActive"
+                ]
+              ],
+              "copyPaste": [
+                []
+              ],
+              "copyPasteOptions": [
+                [
+                  "newRows"
+                ]
+              ],
+              "autoColumns": [
+                []
+              ],
+              "toolbar": [
+                []
+              ],
+              "colorjpath": [
+                []
+              ],
+              "slick.defaultColumnWidth": [
+                null
+              ],
+              "slick.rowHeight": [
+                null
+              ],
+              "slick.headerRowHeight": [
+                30
+              ],
+              "slick.selectionModel": [
+                "row"
+              ],
+              "idProperty": [
+                ""
+              ],
+              "filterType": [
+                "pref"
+              ],
+              "filterRow": [
+                "// Documentation: https://github.com/NPellet/visualizer/blob/46b40ca86345f8fa313563bf9c6ecb80ba323101/src/modules/types/edition/slick_grid/view.js#L1695-L1735"
+              ],
+              "customJpaths": [
+                ""
+              ]
+            }
+          ],
+          "cols": [
+            [
+              {
+                "name": "Submitter",
+                "jpath": [
+                  "$content",
+                  "description",
+                  "info",
+                  "lastname"
+                ],
+                "editor": "none",
+                "forceType": "",
+                "formatter": "typerenderer",
+                "copyFormatter": "default",
+                "visibility": "both",
+                "rendererOptions": "",
+                "editorOptions": "",
+                "width": 88,
+                "hideColumn": []
+              },
+              {
+                "name": "Gene",
+                "jpath": [
+                  "$content",
+                  "description",
+                  "Parameters",
+                  "Gene"
+                ],
+                "editor": "none",
+                "forceType": "",
+                "formatter": "typerenderer",
+                "copyFormatter": "default",
+                "visibility": "both",
+                "rendererOptions": "",
+                "editorOptions": "",
+                "width": 38,
+                "hideColumn": []
+              },
+              {
+                "name": "ORF",
+                "jpath": [
+                  "$content",
+                  "description",
+                  "Parameters",
+                  "orf"
+                ],
+                "editor": "none",
+                "forceType": "",
+                "formatter": "typerenderer",
+                "copyFormatter": "default",
+                "visibility": "both",
+                "rendererOptions": "",
+                "editorOptions": "",
+                "width": 54,
+                "hideColumn": []
+              },
+              {
+                "name": "YPD",
+                "jpath": [
+                  "$content",
+                  "description",
+                  "sample",
+                  "ypd"
+                ],
+                "editor": "none",
+                "forceType": "",
+                "formatter": "typerenderer",
+                "copyFormatter": "default",
+                "visibility": "both",
+                "rendererOptions": "",
+                "editorOptions": "",
+                "width": 50,
+                "hideColumn": []
+              },
+              {
+                "name": "YPDGE",
+                "jpath": [
+                  "$content",
+                  "description",
+                  "sample",
+                  "ypdge"
+                ],
+                "editor": "none",
+                "forceType": "",
+                "formatter": "typerenderer",
+                "copyFormatter": "default",
+                "visibility": "both",
+                "rendererOptions": "",
+                "editorOptions": "",
+                "width": 56,
+                "hideColumn": []
+              },
+              {
+                "name": "YPE",
+                "jpath": [
+                  "$content",
+                  "description",
+                  "sample",
+                  "ype"
+                ],
+                "editor": "none",
+                "forceType": "",
+                "formatter": "typerenderer",
+                "copyFormatter": "default",
+                "visibility": "both",
+                "rendererOptions": "",
+                "editorOptions": "",
+                "width": 54,
+                "hideColumn": []
+              },
+              {
+                "name": "YPL",
+                "jpath": [
+                  "$content",
+                  "description",
+                  "sample",
+                  "ypl"
+                ],
+                "editor": "none",
+                "forceType": "",
+                "formatter": "typerenderer",
+                "copyFormatter": "default",
+                "visibility": "both",
+                "rendererOptions": "",
+                "editorOptions": "",
+                "width": 49,
+                "hideColumn": []
+              },
+              {
+                "name": "YPG",
+                "jpath": [
+                  "$content",
+                  "description",
+                  "sample",
+                  "ypg"
+                ],
+                "editor": "none",
+                "forceType": "",
+                "formatter": "typerenderer",
+                "copyFormatter": "default",
+                "visibility": "both",
+                "rendererOptions": "",
+                "editorOptions": "",
+                "width": 94,
+                "hideColumn": []
+              },
+              {
+                "name": "Remarks",
+                "jpath": [
+                  "$content",
+                  "description",
+                  "remarks"
+                ],
+                "editor": "none",
+                "forceType": "",
+                "formatter": "typerenderer",
+                "copyFormatter": "default",
+                "visibility": "both",
+                "rendererOptions": "",
+                "editorOptions": "",
+                "width": 117,
+                "hideColumn": []
+              },
+              {
+                "name": "",
+                "jpath": [],
+                "editor": "none",
+                "forceType": "",
+                "formatter": "typerenderer",
+                "copyFormatter": "default",
+                "visibility": "both",
+                "rendererOptions": "",
+                "editorOptions": "",
+                "hideColumn": []
+              }
+            ]
+          ],
+          "actionCols": [
+            [
+              {
+                "backgroundColor": [
+                  255,
+                  255,
+                  255,
+                  0
+                ],
+                "color": [
+                  0,
+                  0,
+                  0,
+                  1
+                ],
+                "position": "end",
+                "clickMode": "text"
+              }
+            ]
+          ],
+          "groupings": [
+            [
+              {
+                "getter": []
+              }
+            ]
+          ],
+          "actionOutButtons": [
+            [
+              {}
+            ]
+          ],
+          "data": [
+            {
+              "saveInView": [
+                []
+              ],
+              "varname": [
+                ""
+              ],
+              "data": [
+                "[]"
+              ]
+            }
+          ]
+        }
+      },
+      "layers": {
+        "Default layer": {
+          "position": {
+            "left": 0,
+            "top": 130
+          },
+          "size": {
+            "width": 97,
+            "height": 9
+          },
+          "zIndex": 0,
+          "display": true,
+          "title": "Description by revision",
+          "bgColor": [
+            255,
+            255,
+            255,
+            0
+          ],
+          "wrapper": true,
+          "created": true,
+          "name": "Default layer"
+        },
+        "admin": {
+          "position": {
+            "left": 0,
+            "top": 58
+          },
+          "size": {
+            "width": 131,
+            "height": 12
+          },
+          "zIndex": 0,
+          "display": false,
+          "title": "",
+          "bgColor": [
+            255,
+            255,
+            255,
+            0
+          ],
+          "wrapper": true,
+          "created": true,
+          "name": "admin"
+        },
+        "importdata": {
+          "position": {
+            "left": 0,
+            "top": 61
+          },
+          "size": {
+            "width": 141,
+            "height": 9
+          },
+          "zIndex": 0,
+          "display": false,
+          "title": "Description by revision",
+          "bgColor": [
+            255,
+            255,
+            255,
+            0
+          ],
+          "wrapper": true,
+          "created": true,
+          "name": "Default layer"
+        }
+      },
+      "id": 7,
+      "vars_in": [
+        {
+          "rel": "list",
+          "name": "reportrevision"
+        }
+      ],
+      "actions_in": [
+        {}
+      ],
+      "actions_out": [
+        {
+          "jpath": []
+        }
+      ],
+      "vars_out": [
+        {
+          "jpath": []
+        }
+      ],
+      "toolbar": {
+        "custom": [
+          [
+            {
+              "title": "",
+              "icon": "",
+              "action": "",
+              "position": "begin",
+              "color": [
+                100,
+                100,
+                100,
+                1
+              ]
+            }
+          ]
+        ],
+        "common": [
+          {
+            "toolbar": [
+              [
+                "Open Preferences"
+              ]
+            ]
+          }
+        ]
+      },
+      "css": [
+        {
+          "fontSize": [
+            ""
+          ],
+          "fontFamily": [
+            ""
+          ]
+        }
+      ],
+      "title": "Description by revision"
+    },
+    {
+      "url": "modules/types/edition/onde/",
+      "configuration": {
+        "sections": {},
+        "groups": {
+          "group": [
+            {
+              "hasButton": [
+                [
+                  "show"
+                ]
+              ],
+              "button_text": [
+                "Generate data"
+              ],
+              "debouncing": [
+                -1
+              ],
+              "output": [
+                "new"
+              ],
+              "mode": [
+                "schema"
+              ],
+              "schemaSource": [
+                "variable"
+              ],
+              "schema": [
+                "{}"
+              ],
+              "onchangeFilter": [
+                ""
+              ]
+            }
+          ],
+          "data": [
+            {
+              "saveInView": [
+                [
+                  "yes"
+                ]
+              ],
+              "varname": [
+                ""
+              ],
+              "data": [
+                "{}"
+              ]
+            }
+          ]
+        }
+      },
+      "layers": {
+        "Default layer": {
+          "position": {
+            "left": 0,
+            "top": 80
+          },
+          "size": {
+            "width": 49,
+            "height": 49
+          },
+          "zIndex": 0,
+          "display": true,
+          "title": "Data form",
+          "bgColor": [
+            255,
+            255,
+            255,
+            0
+          ],
+          "wrapper": true,
+          "created": true,
+          "name": "Default layer"
+        },
+        "admin": {
+          "position": {
+            "left": 44,
+            "top": 1
+          },
+          "size": {
+            "width": 44,
+            "height": 48
+          },
+          "zIndex": 0,
+          "display": false,
+          "title": "Data form",
+          "bgColor": [
+            255,
+            255,
+            255,
+            0
+          ],
+          "wrapper": true,
+          "created": true,
+          "name": "admin"
+        },
+        "importdata": {
+          "position": {
+            "left": 47,
+            "top": 3
+          },
+          "size": {
+            "width": 46,
+            "height": 51
+          },
+          "zIndex": 0,
+          "display": false,
+          "title": "Data form",
+          "bgColor": [
+            255,
+            255,
+            255,
+            0
+          ],
+          "wrapper": false,
+          "created": true,
+          "name": "Default layer"
+        }
+      },
+      "id": 8,
+      "vars_in": [
+        {
+          "rel": "schema",
+          "name": "schema"
+        }
+      ],
+      "actions_in": [
+        {}
+      ],
+      "vars_out": [
+        {
+          "event": "onFormSubmit",
+          "rel": "outputValue",
+          "jpath": [],
+          "name": "formsubmitted"
+        }
+      ],
+      "actions_out": [
+        {
+          "jpath": []
+        }
+      ],
+      "toolbar": {
+        "custom": [
+          [
+            {
+              "title": "",
+              "icon": "",
+              "action": "",
+              "position": "begin",
+              "color": [
+                100,
+                100,
+                100,
+                1
+              ]
+            }
+          ]
+        ],
+        "common": [
+          {
+            "toolbar": [
+              [
+                "Open Preferences"
+              ]
+            ]
+          }
+        ]
+      },
+      "css": [
+        {
+          "fontSize": [
+            ""
+          ],
+          "fontFamily": [
+            ""
+          ]
+        }
+      ],
+      "title": "Data form"
+    },
+    {
+      "url": "modules/types/client_interaction/code_editor/",
+      "configuration": {
+        "sections": {},
+        "groups": {
+          "group": [
+            {
+              "mode": [
+                "json"
+              ],
+              "outputType": [
+                null
+              ],
+              "btnvalue": [
+                "Send script"
+              ],
+              "iseditable": [
+                [
+                  "editable"
+                ]
+              ],
+              "hasButton": [
+                [
+                  "button"
+                ]
+              ],
+              "variable": [
+                []
+              ],
+              "storeOnChange": [
+                []
+              ],
+              "debouncing": [
+                0
+              ],
+              "script": [
+                "{\n    \"type\": \"object\",    \n    \"properties\": {\n        \"Parameters\": {\n            \"type\":\"object\",\n             \"properties\":{\n                \"Gene\": {\n                    \"type\":\"string\",\n                    \"label\":\"Gene\",\n                    \"title\":\"Molecular formula\"\n                },\n                \"orf\": {\n                    \"type\":\"number\",\n                    \"label\":\"ORF\",\n                    \"title\":\"Open reading frame\"\n                }\n            }\n        },\n        \"sample\": {\n            \"type\":\"object\",\n             \"properties\":{\n                \"ypd\": {\n                    \"type\":\"number\",\n                    \"label\":\"YPD\",\n                    \"title\":\"Yeast protein database\"\n                },\n                \"ypdge\": {\n                    \"type\":\"number\",\n                    \"label\":\"YPDGE\",\n                    \"title\":\"ypdge\"\n                },\n                \"ype\": {\n                    \"type\":\"number\",\n                    \"label\":\"YPE\",\n                    \"title\":\"ype\"\n                },\n                \"ypl\": {\n                    \"type\":\"number\",\n                    \"label\":\"YPL\",\n                    \"title\":\"ypl\"\n                },\n                \"ypg\": {\n                    \"type\":\"number\",\n                    \"label\":\"YPG\",\n                    \"title\":\"ypg\"\n                }\n            }\n        },\n        \"info\": {\n            \"label\":\"Submitter\",\n            \"type\":\"object\",\n            \"properties\":{\n                \"firstname\": {\n                    \"type\":\"string\",\n                    \"label\":\"Firstname\"\n                },\n                \"lastname\": {\n                    \"type\":\"string\",\n                    \"label\":\"Lastname\"\n                },\n                \"email\": {\n                    \"type\":\"string\",\n                    \"label\":\"Email\"\n                }\n            }\n        },\n        \"remarks\": {\n            \"type\":\"string\",\n            \"label\":\"Remarks\",\n            \"format\": \"multiline\"\n        },\n        \"submit\": {\n            \"type\":\"boolean\",\n            \"title\":\"Submit new form\",\n            \"label\":\"Submit\"\n        }\n    }\n }"
+              ]
+            }
+          ],
+          "ace": [
+            {
+              "useSoftTabs": [
+                [
+                  "yes"
+                ]
+              ],
+              "tabSize": [
+                4
+              ]
+            }
+          ]
+        }
+      },
+      "layers": {
+        "Default layer": {
+          "position": {
+            "left": 99,
+            "top": 26
+          },
+          "size": {
+            "width": 35,
+            "height": 13
+          },
+          "zIndex": 0,
+          "display": false,
+          "title": "JSON schema",
+          "bgColor": [
+            255,
+            255,
+            255,
+            0
+          ],
+          "wrapper": true,
+          "created": true,
+          "name": "Default layer"
+        },
+        "admin": {
+          "position": {
+            "left": 0,
+            "top": 59
+          },
+          "size": {
+            "width": 52,
+            "height": 74
+          },
+          "zIndex": 0,
+          "display": true,
+          "title": "",
+          "bgColor": [
+            255,
+            255,
+            255,
+            0
+          ],
+          "wrapper": true,
+          "created": true,
+          "name": "admin"
+        },
+        "importdata": {
+          "position": {
+            "left": 99,
+            "top": 26
+          },
+          "size": {
+            "width": 35,
+            "height": 13
+          },
+          "zIndex": 0,
+          "display": false,
+          "title": "JSON schema",
+          "bgColor": [
+            255,
+            255,
+            255,
+            0
+          ],
+          "wrapper": true,
+          "created": true,
+          "name": "Default layer"
+        }
+      },
+      "id": 9,
+      "vars_in": [
+        {}
+      ],
+      "actions_in": [
+        {}
+      ],
+      "vars_out": [
+        {
+          "event": "onEditorChange",
+          "rel": "jsonValue",
+          "jpath": [],
+          "name": "schema"
+        }
+      ],
+      "actions_out": [
+        {
+          "jpath": []
+        }
+      ],
+      "toolbar": {
+        "custom": [
+          [
+            {
+              "title": "",
+              "icon": "",
+              "action": "",
+              "position": "begin",
+              "color": [
+                100,
+                100,
+                100,
+                1
+              ]
+            }
+          ]
+        ],
+        "common": [
+          {
+            "toolbar": [
+              [
+                "Open Preferences"
+              ]
+            ]
+          }
+        ]
+      },
+      "css": [
+        {
+          "fontSize": [
+            ""
+          ],
+          "fontFamily": [
+            ""
+          ]
+        }
+      ],
+      "title": ""
+    },
+    {
+      "url": "modules/types/client_interaction/code_executor/",
+      "configuration": {
+        "sections": {},
+        "groups": {
+          "group": [
+            {
+              "display": [
+                [
+                  "editor",
+                  "buttons"
+                ]
+              ],
+              "execOnLoad": [
+                []
+              ],
+              "asyncAwait": [
+                [
+                  "top"
+                ]
+              ],
+              "script": [
+                "const selectedrev = API.getData('selectedrev').resurrect();\nconst button = this.button;\n\nif (typeof selectedrev === 'undefined') {\n    alert('There\\'s no gene selected. Please choose one of Gene DB')\n} else {\n    if (button) {\n        switch (button) {\n            case 'delete':\n                var activatedentry = API.getData('activatedentry');\n                var revision = selectedrev.rev;\n                var uuid = activatedentry._id;\n                \n                function Request(method, url) {\n                  var xhr = new XMLHttpRequest();\n                  xhr.withCredentials = true;\n                  xhr.open(method, url, true);\n                  xhr.setRequestHeader('Authorization', 'Bearer ' + 'access_token');\n                  xhr.setRequestHeader(\"Content-Type\", \"application/json;charset=UTF-8\");\n                  return xhr;\n                }\n                \n                async function entry() {\n                    let prom = new Promise((resolve) => {\n                        let url = 'http://localhost:4444/roc/db/eln/entry/' + uuid + '?rev=' + revision;\n                        var xhr = Request('GET', url);\n                        // var xhr = Request('DELETE', url);\n                        xhr.send();\n                        setTimeout(() => resolve() ,100) \n                        xhr.onreadystatechange = function () {\n                            if (xhr.readyState == 4 && xhr.status == 200 ) {\n                                console.log(JSON.parse(xhr.responseText));\n                            }\n                        }\n                    });\n                    await prom;\n                } entry()\n            break;\n        default:\n        }\n    }\n};\n"
+              ]
+            }
+          ],
+          "libs": [
+            [
+              {}
+            ]
+          ],
+          "buttons": [
+            [
+              {
+                "name": "delete",
+                "label": "Delete revision",
+                "hide": [],
+                "disable": []
+              }
+            ]
+          ]
+        }
+      },
+      "layers": {
+        "Default layer": {
+          "position": {
+            "left": 33,
+            "top": 139
+          },
+          "size": {
+            "width": 22,
+            "height": 5
+          },
+          "zIndex": 0,
+          "display": true,
+          "title": "Delete revision",
+          "bgColor": [
+            255,
+            255,
+            255,
+            0
+          ],
+          "wrapper": false,
+          "created": true,
+          "name": "Default layer"
+        },
+        "admin": {
+          "position": {
+            "left": 0,
+            "top": 0
+          },
+          "size": {
+            "width": 20,
+            "height": 20
+          },
+          "zIndex": 0,
+          "display": false,
+          "title": "",
+          "bgColor": [
+            255,
+            255,
+            255,
+            0
+          ],
+          "wrapper": true,
+          "created": true,
+          "name": "admin"
+        },
+        "importdata": {
+          "position": {
+            "left": 0,
+            "top": 72
+          },
+          "size": {
+            "width": 55,
+            "height": 75
+          },
+          "zIndex": 0,
+          "display": false,
+          "title": "",
+          "bgColor": [
+            255,
+            255,
+            255,
+            0
+          ],
+          "wrapper": true,
+          "created": true,
+          "name": "Default layer"
+        }
+      },
+      "id": 10,
+      "vars_in": [
+        {
+          "rel": "inputValue",
+          "name": "selectedrev"
+        },
+        {
+          "rel": "inputValue",
+          "name": "activatedentry"
+        }
+      ],
+      "actions_in": [
+        {}
+      ],
+      "vars_out": [
+        {
+          "jpath": []
+        }
+      ],
+      "actions_out": [
+        {
+          "jpath": []
+        }
+      ],
+      "toolbar": {
+        "custom": [
+          [
+            {
+              "title": "",
+              "icon": "",
+              "action": "",
+              "position": "begin",
+              "color": [
+                100,
+                100,
+                100,
+                1
+              ]
+            }
+          ]
+        ],
+        "common": [
+          {
+            "toolbar": [
+              [
+                "Open Preferences"
+              ]
+            ]
+          }
+        ]
+      },
+      "css": [
+        {
+          "fontSize": [
+            ""
+          ],
+          "fontFamily": [
+            ""
+          ]
+        }
+      ],
+      "title": "Delete revision"
+    },
+    {
+      "url": "modules/types/client_interaction/dragdrop/",
+      "configuration": {
+        "sections": {},
+        "groups": {
+          "group": [
+            {
+              "label": [
+                "Drop your file here"
+              ],
+              "dragoverlabel": [
+                null
+              ],
+              "hoverlabel": [
+                "Drag'n drop or paste here"
+              ],
+              "fileSelectLabel": [
+                "Select file"
+              ],
+              "labelFontSize": [
+                26
+              ],
+              "checkOptions": [
+                [
+                  "promptAmbiguous"
+                ]
+              ],
+              "inputOptions": [
+                [
+                  "allowDrop",
+                  "allowPaste",
+                  "allowFileInput"
+                ]
+              ]
+            }
+          ],
+          "vars": [
+            [
+              {
+                "filter": "ext",
+                "extension": "*",
+                "filetype": "text",
+                "type": "",
+                "variable": "file"
+              }
+            ]
+          ],
+          "string_general": [
+            {
+              "askFilename": [
+                []
+              ]
+            }
+          ],
+          "string": [
+            [
+              {
+                "filter": "ext",
+                "extension": "*",
+                "type": "",
+                "variable": "str"
+              }
+            ]
+          ],
+          "photo": [
+            [
+              {
+                "variable": "photo"
+              }
+            ]
+          ]
+        }
+      },
+      "layers": {
+        "Default layer": {
+          "position": {
+            "left": 0,
+            "top": 0
+          },
+          "size": {
+            "width": 43,
+            "height": 10
+          },
+          "zIndex": 0,
+          "display": false,
+          "title": "",
+          "bgColor": [
+            255,
+            255,
+            255,
+            0
+          ],
+          "wrapper": true,
+          "created": true,
+          "name": "Default layer"
+        },
+        "admin": {
+          "position": {
+            "left": 0,
+            "top": 0
+          },
+          "size": {
+            "width": 20,
+            "height": 20
+          },
+          "zIndex": 0,
+          "display": false,
+          "title": "",
+          "bgColor": [
+            255,
+            255,
+            255,
+            0
+          ],
+          "wrapper": true,
+          "created": true,
+          "name": "admin"
+        },
+        "importdata": {
+          "position": {
+            "left": 0,
+            "top": 0
+          },
+          "size": {
+            "width": 63,
+            "height": 20
+          },
+          "zIndex": 0,
+          "display": true,
+          "title": "",
+          "bgColor": [
+            255,
+            255,
+            255,
+            0
+          ],
+          "wrapper": true,
+          "created": true,
+          "name": "importdata"
+        }
+      },
+      "id": 11,
+      "vars_out": [
+        {
+          "event": "onRead",
+          "rel": "data",
+          "jpath": [],
+          "name": "data"
+        }
+      ],
+      "vars_in": [],
+      "actions_in": [
+        {}
+      ],
+      "actions_out": [
+        {
+          "jpath": []
+        }
+      ],
+      "toolbar": {
+        "custom": [
+          [
+            {
+              "title": "",
+              "icon": "",
+              "action": "",
+              "position": "begin",
+              "color": [
+                100,
+                100,
+                100,
+                1
+              ]
+            }
+          ]
+        ],
+        "common": [
+          {
+            "toolbar": [
+              [
+                "Open Preferences"
+              ]
+            ]
+          }
+        ]
+      },
+      "css": [
+        {
+          "fontSize": [
+            ""
+          ],
+          "fontFamily": [
+            ""
+          ]
+        }
+      ],
+      "title": ""
+    },
+    {
+      "url": "modules/types/client_interaction/code_executor/",
+      "configuration": {
+        "sections": {},
+        "groups": {
+          "group": [
+            {
+              "display": [
+                [
+                  "editor",
+                  "buttons"
+                ]
+              ],
+              "execOnLoad": [
+                []
+              ],
+              "asyncAwait": [
+                [
+                  "top"
+                ]
+              ],
+              "script": [
+                "// ············································//\nvar data = API.getData(\"data\");\n\nvar analysis = Papa.parse(data.file.content,\n    {\n        delimiter:\",\",\n        header:true\n    }\n);\n\nconsole.log(analysis.content)\nfunction Request(method, url) {\n  var xhr = new XMLHttpRequest();\n  xhr.withCredentials = true;\n  xhr.open(method, url, true);\n  xhr.setRequestHeader('Authorization', 'Bearer ' + 'access_token');\n  xhr.setRequestHeader(\"Content-Type\", \"application/json;charset=UTF-8\");\n    xhr.onreadystatechange = function () {\n        if (xhr.readyState == 4 && xhr.status == 200 ) {\n            var data = JSON.parse(JSON.stringify(xhr.responseText));\n            console.log(xhr)\n        }\n    };\n  return xhr;\n}\n\nasync function entry() {\n    for (let i = 0; i < 40; i++) {\n        let prom = new Promise((resolve) => {\n            var newitem = {\n              \"$type\": \"entry\",\n              \"$id\": [\n              analysis.data[i].gene\n              ],\n              \"$kind\": \"dna\",\n              \"$owners\": [\n                \"admin@cheminfo.org\"\n              ],\n              \"$content\": {\n              \"gene\": analysis.data[i].gene,\n              \"orf\": analysis.data[i].orf,\n              \"nofprobes\": analysis.data[i].nofprobes,\n              \"measurments\": analysis.data[i].measurments,\n              \"Fstatistic\": analysis.data[i].Fstatistic,\n              \"YPD\": analysis.data[i].YPD,\n              \"YPDGE\": analysis.data[i].YPDGE,\n              \"YPE\": analysis.data[i].YPE,\n              \"YPL\": analysis.data[i].YPL,\n              \"YPG\": analysis.data[i].YPG,\n              \"description\": [],\n              },\n              \"$lastModification\": \"admin@cheminfo.org\"\n            }\n            console.log(newitem);\n            let url = 'http://localhost:4444/roc/db/eln/entry/'\n            var xhr = Request('POST', url);\n            xhr.send(JSON.stringify(newitem));\n            console.log(xhr);\n            setTimeout(() => resolve() ,200) // *  try to fix this... number of entries change because this. If is running entries gives fake genes.\n        });\n        await prom;\n    }\n} entry()\n\n"
+              ]
+            }
+          ],
+          "libs": [
+            [
+              {
+                "lib": "components/papa-parse/papaparse.min",
+                "alias": "Papa"
+              }
+            ]
+          ],
+          "buttons": [
+            [
+              {
+                "name": "button1",
+                "label": "Execute",
+                "hide": [],
+                "disable": []
+              }
+            ]
+          ]
+        }
+      },
+      "layers": {
+        "Default layer": {
+          "position": {
+            "left": 0,
+            "top": 11
+          },
+          "size": {
+            "width": 59,
+            "height": 92
+          },
+          "zIndex": 0,
+          "display": false,
+          "title": "",
+          "bgColor": [
+            255,
+            255,
+            255,
+            0
+          ],
+          "wrapper": true,
+          "created": true,
+          "name": "Default layer"
+        },
+        "admin": {
+          "position": {
+            "left": 0,
+            "top": 0
+          },
+          "size": {
+            "width": 20,
+            "height": 20
+          },
+          "zIndex": 0,
+          "display": false,
+          "title": "",
+          "bgColor": [
+            255,
+            255,
+            255,
+            0
+          ],
+          "wrapper": true,
+          "created": true,
+          "name": "admin"
+        },
+        "importdata": {
+          "position": {
+            "left": 0,
+            "top": 21
+          },
+          "size": {
+            "width": 73,
+            "height": 134
+          },
+          "zIndex": 0,
+          "display": true,
+          "title": "",
+          "bgColor": [
+            255,
+            255,
+            255,
+            0
+          ],
+          "wrapper": true,
+          "created": true,
+          "name": "importdata"
+        }
+      },
+      "id": 12,
+      "vars_in": [
+        {
+          "rel": "inputValue",
+          "name": "data"
+        }
+      ],
+      "actions_in": [
+        {}
+      ],
+      "vars_out": [
+        {
+          "jpath": []
+        }
+      ],
+      "actions_out": [
+        {
+          "jpath": []
+        }
+      ],
+      "toolbar": {
+        "custom": [
+          [
+            {
+              "title": "",
+              "icon": "",
+              "action": "",
+              "position": "begin",
+              "color": [
+                100,
+                100,
+                100,
+                1
+              ]
+            }
+          ]
+        ],
+        "common": [
+          {
+            "toolbar": [
+              [
+                "Open Preferences"
+              ]
+            ]
+          }
+        ]
+      },
+      "css": [
+        {
+          "fontSize": [
+            ""
+          ],
+          "fontFamily": [
+            ""
+          ]
+        }
+      ],
+      "title": ""
+    },
+    {
+      "url": "modules/types/edition/slick_grid/",
+      "configuration": {
+        "sections": {},
+        "groups": {
+          "group": [
+            {
+              "slickCheck": [
+                [
+                  "enableCellNavigation",
+                  "rowNumbering",
+                  "forceFitColumns",
+                  "highlightScroll",
+                  "forgetLastActive"
+                ]
+              ],
+              "copyPaste": [
+                []
+              ],
+              "copyPasteOptions": [
+                [
+                  "newRows"
+                ]
+              ],
+              "autoColumns": [
+                []
+              ],
+              "toolbar": [
+                []
+              ],
+              "colorjpath": [
+                []
+              ],
+              "slick.defaultColumnWidth": [
+                null
+              ],
+              "slick.rowHeight": [
+                null
+              ],
+              "slick.headerRowHeight": [
+                30
+              ],
+              "slick.selectionModel": [
+                "row"
+              ],
+              "idProperty": [
+                ""
+              ],
+              "filterType": [
+                "pref"
+              ],
+              "filterRow": [
+                "// Documentation: https://github.com/NPellet/visualizer/blob/46b40ca86345f8fa313563bf9c6ecb80ba323101/src/modules/types/edition/slick_grid/view.js#L1695-L1735"
+              ],
+              "customJpaths": [
+                ""
+              ]
+            }
+          ],
+          "cols": [
+            [
+              {
+                "jpath": [
+                  "0",
+                  "gene"
+                ],
+                "editor": "none",
+                "forceType": "",
+                "formatter": "typerenderer",
+                "copyFormatter": "default",
+                "visibility": "both",
+                "rendererOptions": "",
+                "editorOptions": "",
+                "hideColumn": []
+              }
+            ]
+          ],
+          "actionCols": [
+            [
+              {
+                "backgroundColor": [
+                  255,
+                  255,
+                  255,
+                  0
+                ],
+                "color": [
+                  0,
+                  0,
+                  0,
+                  1
+                ],
+                "position": "end",
+                "clickMode": "text"
+              }
+            ]
+          ],
+          "groupings": [
+            [
+              {
+                "getter": []
+              }
+            ]
+          ],
+          "actionOutButtons": [
+            [
+              {}
+            ]
+          ],
+          "data": [
+            {
+              "saveInView": [
+                []
+              ],
+              "varname": [
+                ""
+              ],
+              "data": [
+                "[]"
+              ]
+            }
+          ]
+        }
+      },
+      "layers": {
+        "Default layer": {
+          "position": {
+            "left": 50,
+            "top": 15
+          },
+          "size": {
+            "width": 47,
+            "height": 54
+          },
+          "zIndex": 0,
+          "display": true,
+          "title": "Data of genes",
+          "bgColor": [
+            255,
+            255,
+            255,
+            0
+          ],
+          "wrapper": true,
+          "created": true,
+          "name": "Default layer"
+        },
+        "admin": {
+          "position": {
+            "left": 0,
+            "top": 0
+          },
+          "size": {
+            "width": 20,
+            "height": 20
+          },
+          "zIndex": 0,
+          "display": false,
+          "title": "",
+          "bgColor": [
+            255,
+            255,
+            255,
+            0
+          ],
+          "wrapper": true,
+          "created": true,
+          "name": "admin"
+        },
+        "importdata": {
+          "position": {
+            "left": 0,
+            "top": 0
+          },
+          "size": {
+            "width": 20,
+            "height": 20
+          },
+          "zIndex": 0,
+          "display": false,
+          "title": "",
+          "bgColor": [
+            255,
+            255,
+            255,
+            0
+          ],
+          "wrapper": true,
+          "created": true,
+          "name": "importdata"
+        }
+      },
+      "id": 13,
+      "vars_in": [
+        {
+          "rel": "list",
+          "name": "geneData"
+        }
+      ],
+      "actions_in": [
+        {}
+      ],
+      "actions_out": [
+        {
+          "jpath": []
+        }
+      ],
+      "vars_out": [
+        {
+          "jpath": []
+        }
+      ],
+      "toolbar": {
+        "custom": [
+          [
+            {
+              "title": "",
+              "icon": "",
+              "action": "",
+              "position": "begin",
+              "color": [
+                100,
+                100,
+                100,
+                1
+              ]
+            }
+          ]
+        ],
+        "common": [
+          {
+            "toolbar": [
+              [
+                "Open Preferences"
+              ]
+            ]
+          }
+        ]
+      },
+      "css": [
+        {
+          "fontSize": [
+            ""
+          ],
+          "fontFamily": [
+            ""
+          ]
+        }
+      ],
+      "title": "Data of genes"
+    },
+    {
+      "url": "modules/types/client_interaction/code_executor/",
+      "configuration": {
+        "sections": {},
+        "groups": {
+          "group": [
+            {
+              "display": [
+                [
+                  "editor",
+                  "buttons"
+                ]
+              ],
+              "execOnLoad": [
+                []
+              ],
+              "asyncAwait": [
+                [
+                  "top"
+                ]
+              ],
+              "script": [
+                "const showData = API.getData('showData').resurrect();\nconsole.log(showData)\nvar item = [];\nfor (let i = 0; i < showData.length; i++) {\n    var newitem = {\n        \"gene\": showData[i].$content.gene,\n        \"orf\": showData[i].$content.orf,\n        \"nofprobes\": showData[i].$content.nofprobes,\n        \"measurments\": showData[i].$content.measurments,\n        \"Fstatistic\": showData[i].$content.Fstatistic,\n        \"YPD\": showData[i].$content.YPD,\n        \"YPDGE\": showData[i].$content.YPDGE,\n        \"YPE\": showData[i].$content.YPE,\n        \"YPL\": showData[i].$content.YPL,\n        \"YPG\": showData[i].$content.YPG\n    }\n    item.push(newitem)\n}\n\n\nAPI.createData('geneData', item);"
+              ]
+            }
+          ],
+          "libs": [
+            [
+              {}
+            ]
+          ],
+          "buttons": [
+            [
+              {
+                "name": "button1",
+                "label": "Show available data",
+                "hide": [],
+                "disable": []
+              }
+            ]
+          ]
+        }
+      },
+      "layers": {
+        "Default layer": {
+          "position": {
+            "left": 66,
+            "top": 9
+          },
+          "size": {
+            "width": 22,
+            "height": 5
+          },
+          "zIndex": 0,
+          "display": true,
+          "title": "",
+          "bgColor": [
+            255,
+            255,
+            255,
+            0
+          ],
+          "wrapper": false,
+          "created": true,
+          "name": "Default layer"
+        },
+        "admin": {
+          "position": {
+            "left": 0,
+            "top": 0
+          },
+          "size": {
+            "width": 20,
+            "height": 20
+          },
+          "zIndex": 0,
+          "display": false,
+          "title": "",
+          "bgColor": [
+            255,
+            255,
+            255,
+            0
+          ],
+          "wrapper": true,
+          "created": true,
+          "name": "admin"
+        },
+        "importdata": {
+          "position": {
+            "left": 0,
+            "top": 0
+          },
+          "size": {
+            "width": 20,
+            "height": 20
+          },
+          "zIndex": 0,
+          "display": false,
+          "title": "",
+          "bgColor": [
+            255,
+            255,
+            255,
+            0
+          ],
+          "wrapper": true,
+          "created": true,
+          "name": "importdata"
+        }
+      },
+      "id": 14,
+      "vars_in": [
+        {
+          "rel": "inputValue",
+          "name": "activatedentry"
+        },
+        {
+          "rel": "inputValue",
+          "name": "showData"
+        }
+      ],
+      "actions_in": [
+        {}
+      ],
+      "vars_out": [
+        {
+          "event": "onScriptEnded",
+          "rel": "outputValue",
+          "jpath": [],
+          "name": "geneData"
+        }
+      ],
+      "actions_out": [
+        {
+          "jpath": []
+        }
+      ],
+      "toolbar": {
+        "custom": [
+          [
+            {
+              "title": "",
+              "icon": "",
+              "action": "",
+              "position": "begin",
+              "color": [
+                100,
+                100,
+                100,
+                1
+              ]
+            }
+          ]
+        ],
+        "common": [
+          {
+            "toolbar": [
+              [
+                "Open Preferences"
+              ]
+            ]
+          }
+        ]
+      },
+      "css": [
+        {
+          "fontSize": [
+            ""
+          ],
+          "fontFamily": [
+            ""
+          ]
+        }
+      ],
+      "title": ""
+    }
+  ],
+  "variables": [
+    {
+      "varname": "tiles",
+      "jpath": [
+        "tiles"
+      ]
+    },
+    {
+      "varname": "twigTemplate",
+      "jpath": [
+        "twigTemplate"
+      ]
+    },
+    {
+      "varname": "labelPrinters",
+      "jpath": [
+        "labelPrinters"
+      ]
+    },
+    {
+      "varname": "labelPrintFormats",
+      "jpath": [
+        "labelPrintFormats"
+      ]
+    },
+    {
+      "varname": "printServers",
+      "jpath": [
+        "printServers"
+      ]
+    },
+    {
+      "varname": "allIds",
+      "jpath": [
+        "allIds"
+      ]
+    },
+    {
+      "varname": "sampleFormats",
+      "jpath": [
+        "sampleFormats"
+      ]
+    },
+    {
+      "varname": "formSchema",
+      "jpath": [
+        "formSchema"
+      ]
+    },
+    {
+      "varname": "formSample",
+      "jpath": [
+        "formSample"
+      ]
+    },
+    {
+      "varname": "samples",
+      "jpath": [
+        "samples"
+      ]
+    },
+    {
+      "varname": "filteredSamples",
+      "jpath": [
+        "filteredSamples"
+      ]
+    }
+  ],
+  "aliases": [
+    {}
+  ],
+  "configuration": {
+    "title": "datain"
+  },
+  "actionscripts": [
+    {
+      "sections": {},
+      "groups": {
+        "action": [
+          {
+            "name": [
+              null
+            ],
+            "script": [
+              null
+            ]
+          }
+        ]
+      }
+    }
+  ],
+  "init_script": [
+    {
+      "sections": {},
+      "groups": {
+        "general": [
+          {
+            "script": [
+              "function Request(method, url) {\n  var xhr = new XMLHttpRequest();\n  xhr.withCredentials = true;\n  xhr.open(method, url, true);\n  xhr.setRequestHeader('Authorization', 'Bearer ' + 'access_token');\n  xhr.setRequestHeader(\"Content-Type\", \"application/json;charset=UTF-8\");\n    xhr.onreadystatechange = function () {\n        if (xhr.readyState == 4 && xhr.status == 200 ) {\n            var data = JSON.parse(JSON.stringify(xhr.responseText));\n            API.createData('entries', JSON.parse(xhr.responseText))\n        }\n    };\n  return xhr;\n}\n\n\nasync function entry() {\n    for (let i = 0; i < 1; i++) {\n        let prom = new Promise((resolve) => {\n            let url = 'http://localhost:4444/roc/db/eln/_view/dnatoc';\n            var xhr = Request('GET', url);\n            xhr.send();\n            setTimeout((newitem) => resolve() ,100) // *  try to fix this... number of entries change because this. If is running entries gives fake genes.\n        });\n        await prom;\n    }\n} entry()"
+            ]
+          }
+        ]
+      }
+    }
+  ],
+  "custom_filters": [
+    {
+      "sections": {
+        "modules": [
+          {
+            "sections": {},
+            "groups": {
+              "modules": [
+                [
+                  {}
+                ]
+              ]
+            }
+          }
+        ],
+        "filtersLib": [
+          {
+            "sections": {},
+            "groups": {
+              "filters": [
+                [
+                  {}
+                ]
+              ]
+            }
+          }
+        ],
+        "filters": [
+          {
+            "sections": {},
+            "groups": {
+              "filter": [
+                {
+                  "name": [
+                    null
+                  ],
+                  "script": [
+                    null
+                  ]
+                }
+              ],
+              "libs": [
+                [
+                  {}
+                ]
+              ]
+            }
+          }
+        ]
+      },
+      "groups": {}
+    }
+  ],
+  "actionfiles": [
+    {
+      "sections": {},
+      "groups": {
+        "action": [
+          [
+            {}
+          ]
+        ]
+      }
+    }
+  ]
+}
